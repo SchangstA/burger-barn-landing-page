@@ -1,0 +1,285 @@
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Prevent font size inflation */
+html {
+  -moz-text-size-adjust: none;
+  -webkit-text-size-adjust: none;
+  text-size-adjust: none;
+}
+
+/* Remove default margin in favour of better control in authored CSS */
+body, h1, h2, h3, h4, p,
+figure, blockquote, dl, dd {
+  margin-block-end: 0;
+  color: white;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role='list'],
+ol[role='list'] {
+  list-style: none;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  line-height: 1.5;
+}
+
+/* Set shorter line heights on headings and interactive elements */
+h1, h2, h3, h4,
+button, input, label {
+  line-height: 1.1;
+}
+
+/* Balance text wrapping on headings */
+h1, h2,
+h3, h4 {
+  text-wrap: balance;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+  color: currentColor;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input, button,
+textarea, select {
+  font-family: inherit;
+  font-size: inherit;
+}
+
+/* Make sure textareas without a rows attribute are not tiny */
+textarea:not([rows]) {
+  min-height: 10em;
+}
+
+/* Anything that has been anchored to should have extra scroll margin */
+:target {
+  scroll-margin-block: 5ex;
+}
+
+P {
+  font-size: 42px;
+  line-height: 12px;
+  font-weight: bolder;
+}
+
+h2 {
+  font-size: 3.3rem;
+  padding: none;
+}
+
+.dongle-regular {
+  font-family: "Dongle", sans-serif;
+  font-weight: 600;
+  font-style: normal;
+}
+
+
+.container {
+  display: grid;
+  justify-content: center;
+  margin-inline: 20rem;
+  border: 1px solid black;
+  background-image: url(images/chalkboard-background.jpg);
+  background-size: cover;
+  background-position: left;
+  padding-bottom: 3rem;
+  margin-bottom: 8px;
+  max-width: 80rem;
+}
+
+
+#menu {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  padding: 1rem;
+  padding-inline: 6%;
+}
+
+#image1 {
+  width: 30rem;
+  margin-left: 3rem;
+  margin-top: 4rem;
+}
+
+#image2 {
+  width: 26rem;
+  margin-top: 1rem;
+}
+
+#image3 {
+  width: 25rem;
+  margin: 8rem 0 0 6rem;
+}
+
+#image4 {
+  width: 25rem;
+  margin-top: 8rem;
+}
+
+@media (max-width: 1700px) {
+  P {
+    font-size: 32px;
+    line-height: 12px;
+    font-weight: bolder;
+  }
+  
+  h2 {
+    font-size: 3rem;
+    padding: none;
+  }
+
+  #image1 {
+    width: 20rem;
+    margin-left: 5rem;
+    margin-top: 4rem;
+  }
+  
+  #image2 {
+    width: 20rem;
+    margin-top: 4rem;
+  }
+  
+  #image3 {
+    width: 18rem;
+    margin: 7rem 0 0 6rem;
+  }
+
+  #image4 {
+    width: 20rem;
+    margin: 13rem 0 0 2rem;
+  }
+}
+
+@media (max-width: 1450px) {
+  P {
+    font-size: 20px;
+    line-height: 12px;
+    font-weight: bolder;
+  }
+  
+  h2 {
+    font-size: 2rem;
+    padding: none;
+  }
+
+  #image1 {
+    width: 12rem;
+    margin-left: 6rem;
+  }
+  
+  #image2 {
+    width: 13rem;
+    margin-left: 2rem;
+    margin-top: 3rem;
+  }
+  
+  #image3 {
+    width: 13rem;
+    margin: 6rem 0 0 6rem;
+  }
+
+  #image4 {
+    width: 14rem;
+    margin: 9rem 0 0 2rem;
+  }
+}
+
+@media (max-width: 1300px) {
+  .container {
+    margin-inline: 10rem;
+  }
+
+  #menu {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    padding-inline: 4rem;
+  }
+
+  P {
+    font-size: 28px;
+    line-height: 12px;
+    font-weight: bolder;
+  }
+  
+  h2 {
+    font-size: 3rem;
+    padding: none;
+  }
+
+  #image1 {
+    display: none;
+  }
+  
+  #image2 {
+    display: none;
+  }
+  
+  #image3 {
+    display: none;
+  }
+
+  #image4 {
+    display: none;
+  }
+}
+
+@media (max-width: 790px) {
+  .container {
+    margin-inline: 3rem;
+  }
+}
+
+@media (max-width: 560px) {
+  .container {
+    margin-inline: 1rem;
+  }
+
+  #menu {
+    padding: 1rem;
+  }
+
+  P {
+    font-size: 24px;
+    line-height: 12px;
+    font-weight: bolder;
+  }
+  
+  h2 {
+    font-size: 2rem;
+    padding: none;
+  }
+}
+
+@media (max-width: 360px) {
+  #menu {
+    padding: 1rem;
+  }
+
+  P {
+    font-size: 24px;
+    line-height: 12px;
+    font-weight: bolder;
+  }
+  
+  h2 {
+    font-size: 2rem;
+    padding: none;
+  }
+}
